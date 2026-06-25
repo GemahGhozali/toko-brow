@@ -28,12 +28,12 @@
 
         {{-- Navlinks --}}
         <nav class="flex gap-6">
-            <a href="#hero" class="text-body text-primary-900">Beranda</a>
+            <a href="{{ url('/') }}" class="text-body text-primary-900">Beranda</a>
             <a href="#tentang-kami" class="text-body text-primary-900">Tentang Kami</a>
             <a href="#merchandise" class="text-body text-primary-900">Merchandise</a>
             <a href="#tim-kami" class="text-body text-primary-900">Tim Kami</a>
             <a href="#testimoni-pelanggan" class="text-body text-primary-900">Testimoni Pelanggan</a>
-            <a href="#hero" class="text-body text-primary-900">E-Book</a>
+            <a href="{{ url('/e-book') }}" class="text-body text-primary-900">E-Book</a>
         </nav>
 
     </div>
