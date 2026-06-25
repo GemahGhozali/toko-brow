@@ -64,7 +64,7 @@
     <x-navbar/>
 
     {{-- Hero Section --}}
-    <section id="#hero" class="w-full max-w-7xl mx-auto flex items-center pt-16">
+    <section class="w-full max-w-7xl mx-auto flex items-center pt-16">
 
         {{-- Section Content --}}
         <div class="flex-1">
@@ -129,7 +129,7 @@
     </div>
 
     {{-- Tentang Kami Section --}}
-    <section id="#tentang-kami" class="w-full max-w-7xl mx-auto flex py-16 gap-16">
+    <section id="tentang-kami" class="w-full max-w-7xl mx-auto flex py-16 gap-16">
 
         {{-- Section Image --}}
         <div class="grow-0 basis-[584px] rounded-4xl bg-cover bg-center bg-no-repeat" style="background-image: url('/assets/image/toko-brow-crew-table.webp');"></div>
@@ -186,7 +186,7 @@
     </section>
 
     {{-- Merchandise Section --}}
-    <section id="#merchandise" class="w-full bg-primary-950 py-32 my-16">
+    <section id="merchandise" class="w-full bg-primary-950 py-32 my-16">
         <div class="w-full max-w-7xl mx-auto text-center">
 
             {{-- Title & Subtitle --}}
@@ -228,7 +228,7 @@
     </section>
 
     {{-- Tim Kami Section --}}
-    <section id="#tim-kami" class="w-full max-w-7xl mx-auto py-16">
+    <section id="tim-kami" class="w-full max-w-7xl mx-auto py-16">
 
         {{-- Title & Subtitle --}}
         <span class="inline-block text-badge px-4 py-2.5 mb-3 text-primary-900 bg-primary-200 rounded-full">Tim Kami</span>
@@ -265,7 +265,7 @@
     </section>
 
     {{-- Testimoni Pelanggan Section --}}
-    <section id="#testimoni-pelanggan" class="py-16 text-center">
+    <section id="testimoni-pelanggan" class="py-16 text-center">
 
         {{-- Title & Subtitle --}}
         <span class="inline-block text-badge px-4 py-2.5 mb-3 text-primary-900 bg-primary-200 rounded-full">Testimoni Pelanggan</span>
