@@ -1,9 +1,104 @@
-@import 'tailwindcss';
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+    --font-heading: "Playfair Display", serif;
+    --font-body: "Montserrat", sans-serif;
+
+    --color-primary-50: #faf7f3;
+    --color-primary-100: #f4efe6;
+    --color-primary-200: #e4d7c4;
+    --color-primary-300: #d3bd9e;
+    --color-primary-400: #c19d76;
+    --color-primary-500: #b4865b;
+    --color-primary-600: #a67450;
+    --color-primary-700: #8a5d44;
+    --color-primary-800: #704d3c;
+    --color-primary-900: #5c4032;
+    --color-primary-950: #312019;
+
+    --text-h1: 3rem; /* 48px */
+    --text-h1--line-height: 4.5rem; /* 72px */
+
+    --text-h2: 2.5rem; /* 40px */
+    --text-h2--line-height: 3.75rem; /* 60px */
+
+    --text-h3: 2rem; /* 32px */
+    --text-h3--line-height: 3rem; /* 48px */
+
+    --text-h4: 1.5rem; /* 24px */
+    --text-h4--line-height: 2.25rem; /* 36px */
+
+    --text-h5: 1.25rem; /* 20px */
+    --text-h5--line-height: 1.875rem; /* 30px */
+
+    --text-body: 1rem; /* 16px */
+    --text-body--line-height: 1.5rem; /* 24px */
+
+    --text-btn-lg: 1.25rem; /* 20px */
+    --text-btn-lg--line-height: 1.5rem; /* 24px */
+
+    --text-badge: 0.875rem; /* 14px */
+    --text-badge--line-height: 1.3125rem; /* 21px */
+
+    --animate-tagline-left: tagline-left 10s linear infinite;
+    --animate-marquee-left: marquee-left 30s linear infinite;
+    --animate-marquee-right: marquee-right 30s linear infinite;
+
+    @keyframes tagline-left {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-735.88px);
+        }
+    }
+
+    @keyframes marquee-left {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-1770px);
+        }
+    }
+    @keyframes marquee-right {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(1770px);
+        }
+    }
+}
+
+@layer utilities {
+    .text-h1,
+    .text-h2,
+    .text-h3,
+    .text-h4,
+    .text-h5 {
+        font-family: var(--font-heading);
+        font-weight: 700;
+    }
+
+    .text-body,
+    .text-btn-lg,
+    .text-badge {
+        font-family: var(--font-body);
+    }
+
+    .text-badge {
+        font-weight: 500;
+    }
+
+    .text-btn-lg {
+        font-weight: 600;
+    }
+}
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
-
-@theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
-}
+@source "../views/**/*.blade.php";
+@source "./**/*.js";
