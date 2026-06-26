@@ -1,22 +1,22 @@
-<footer class="w-full bg-primary-950 p-12 space-y-8 rounded-t-[64px]">
+<footer class="w-full bg-primary-950 p-12 space-y-8 rounded-t-[64px] max-md:p-6 max-md:space-y-6 max-md:rounded-t-[32px] max-md:pt-8 max-lg:p-8">
 
     {{-- Footer Header --}}
-    <header class="flex justify-between items-end">
+    <header class="flex justify-between gap-6 sm:items-end max-lg:flex-col max-lg:gap-6">
 
         {{-- Logo & Brand Overview --}}
-        <div class="flex items-center gap-6">
+        <div class="flex items-center gap-6 max-md:flex-col">
             <img src="/assets/svg/logo.svg" alt="Toko Brow Logo" class="h-[132px]">
-            <div class="space-y-1">
+            <div class="space-y-1 max-md:text-center">
                 <h3 class="text-h3 text-primary-50">Toko Brow</h3>
                 <p class="text-body text-primary-200">
-                    Ruang tenang di tengah padatnya rutinitas kota. Tempat terbaik untuk <br> menikmati kehangatan suasana dan kelembutan rasa brownies
+                    Ruang tenang di tengah padatnya rutinitas kota. Tempat terbaik untuk <br class="max-xl:hidden"> menikmati kehangatan suasana dan kelembutan rasa brownies
                 </p>
             </div>
         </div>
 
         {{-- CTA Button --}}
-        <a href="https://maps.app.goo.gl/KYKnx3eswVZzjV2J8" target="_blank" class="w-fit bg-primary-800 text-white rounded-xl text-btn-lg py-4 pl-6 pr-4 flex items-center gap-2">
-            <span>Kunjungi Toko Brow Sekarang</span>
+        <a href="https://maps.app.goo.gl/KYKnx3eswVZzjV2J8" target="_blank" class="w-fit shrink-0 bg-primary-800 text-white rounded-xl text-btn-lg py-4 pl-6 pr-4 flex justify-center items-center gap-2 max-lg:w-full">
+            <span>Berkunjung Sekarang</span>
             <img src="/assets/svg/arrow-right-up-icon.svg" alt="Arrow Right Up Icon">
         </a>
 
@@ -26,38 +26,45 @@
     <hr class="border-primary-200">
 
     {{-- Footer Content --}}
-    <div class="flex gap-24">
-        <div>
-            {{-- Operational Time --}}
-            <h3 class="text-h3 text-primary-50 mb-4">Waktu Operasional</h3>
-            <ul class="space-y-4 mb-10">
-                <li class="flex items-center gap-1.5">
-                    <img src="/assets/svg/clock-icon.svg" alt="Clock Icon">
-                    <p class="text-body text-primary-200">Hari Senin - Jumat, Jam 8 Pagi s/d 10 Malam</p>
-                </li>
-                <li class="flex items-center gap-1.5">
-                    <img src="/assets/svg/clock-icon.svg" alt="Clock Icon">
-                    <p class="text-body text-primary-200">Hari Sabtu & Minggu, Jam 10 Pagi s/d 10 Malam</p>
-                </li>
-            </ul>
+    <div class="flex gap-24 max-lg:flex-col max-lg:gap-8 max-xl:gap-16">
 
-            {{-- Social Media --}}
-            <h3 class="text-h3 text-primary-50 mb-1">Social Media</h3>
-            <p class="text-body text-primary-200 mb-4">Mari terhubung dengan kami melalui sosial media!</p>
-            <div class="flex gap-2 mb-12">
-                <a href="#" class="size-12 grid place-content-center bg-primary-800 rounded-full">
-                    <img src="/assets/svg/tiktok-icon.svg" alt="Tiktok Toko Brow">
-                </a>
-                <a href="#" class="size-12 grid place-content-center bg-primary-800 rounded-full">
-                    <img src="/assets/svg/instagram-icon.svg" alt="Instagram Toko Brow">
-                </a>
-                <a href="#" class="size-12 grid place-content-center bg-primary-800 rounded-full">
-                    <img src="/assets/svg/whatsapp-icon.svg" alt="Whatsapp Toko Brow">
-                </a>
+        {{-- Toko Brow General Information --}}
+        <div class="flex gap-8 flex-col max-md:flex-col max-lg:flex-row">
+
+            {{-- Operational Time --}}
+            <div>
+                <h3 class="text-h3 text-primary-50 mb-4">Waktu Operasional</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-1.5">
+                        <img src="/assets/svg/clock-icon.svg" alt="Clock Icon">
+                        <p class="text-body text-primary-200">Hari Senin - Jumat, Jam 8 Pagi s/d 10 Malam</p>
+                    </li>
+                    <li class="flex items-start gap-1.5">
+                        <img src="/assets/svg/clock-icon.svg" alt="Clock Icon">
+                        <p class="text-body text-primary-200">Hari Sabtu & Minggu, Jam 10 Pagi s/d 10 Malam</p>
+                    </li>
+                </ul>
             </div>
 
-            {{-- Copyright --}}
-            <p class="text-body text-primary-200">Copyright © 2026 Toko Brow. All rights reserved.</p>
+            {{-- Social Media --}}
+            <div>
+                <h3 class="text-h3 text-primary-50 mb-1">Social Media</h3>
+                <p class="text-body text-primary-200 mb-4">Mari terhubung dengan kami melalui sosial media!</p>
+                <div class="flex gap-2">
+                    <a href="#" class="size-12 grid place-content-center bg-primary-800 rounded-full">
+                        <img src="/assets/svg/tiktok-icon.svg" alt="Tiktok Toko Brow">
+                    </a>
+                    <a href="#" class="size-12 grid place-content-center bg-primary-800 rounded-full">
+                        <img src="/assets/svg/instagram-icon.svg" alt="Instagram Toko Brow">
+                    </a>
+                    <a href="#" class="size-12 grid place-content-center bg-primary-800 rounded-full">
+                        <img src="/assets/svg/whatsapp-icon.svg" alt="Whatsapp Toko Brow">
+                    </a>
+                </div>
+            </div>
+
+            {{-- Copyright (Desktop) --}}
+            <p class="text-body text-primary-200 max-lg:hidden">&copy; Copyright {{ date('Y') }} Toko Brow. All rights reserved.</p>
         </div>
 
         {{-- Toko Brow Location --}}
@@ -69,9 +76,12 @@
                 allowfullscreen="true" 
                 loading="lazy" 
                 referrerpolicy="strict-origin-when-cross-origin"
-                class="rounded-[32px] flex-1">
+                class="rounded-[32px] flex-1 max-lg:rounded-2xl">
             </iframe>
         </div>
+
+        {{-- Copyright (Mobile) --}}
+        <p class="text-body text-primary-200 border-t border-primary-200 text-center max-md:pt-6 max-lg:pt-8 lg:hidden">&copy; Copyright {{ date('Y') }} Toko Brow. All rights reserved.</p>
     </div>
     
 </footer>
