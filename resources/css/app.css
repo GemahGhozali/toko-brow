@@ -18,29 +18,29 @@
     --color-primary-900: #5c4032;
     --color-primary-950: #312019;
 
-    --text-h1: 3rem; /* 48px */
-    --text-h1--line-height: 4.5rem; /* 72px */
+    --text-h1: clamp(2.25rem, 2.5vw + 1.5rem, 3rem);
+    --text-h1--line-height: clamp(3.25rem, 3.75vw + 2rem, 4.5rem);
 
-    --text-h2: 2.5rem; /* 40px */
-    --text-h2--line-height: 3.75rem; /* 60px */
+    --text-h2: clamp(1.875rem, 2vw + 1.25rem, 2.5rem);
+    --text-h2--line-height: clamp(2.5rem, 3.75vw + 1.25rem, 3.75rem);
 
-    --text-h3: 2rem; /* 32px */
-    --text-h3--line-height: 3rem; /* 48px */
+    --text-h3: clamp(1.5rem, 1.5vw + 1rem, 2rem);
+    --text-h3--line-height: clamp(2rem, 3vw + 1rem, 3rem);
 
-    --text-h4: 1.5rem; /* 24px */
-    --text-h4--line-height: 2.25rem; /* 36px */
+    --text-h4: clamp(1.25rem, 0.75vw + 1rem, 1.5rem);
+    --text-h4--line-height: clamp(1.75rem, 1.5vw + 1.25rem, 2.25rem);
 
-    --text-h5: 1.25rem; /* 20px */
-    --text-h5--line-height: 1.875rem; /* 30px */
+    --text-h5: clamp(1.125rem, 0.5vw + 1rem, 1.25rem);
+    --text-h5--line-height: clamp(1.5rem, 1.15vw + 1.125rem, 1.875rem);
 
-    --text-body: 1rem; /* 16px */
-    --text-body--line-height: 1.5rem; /* 24px */
+    --text-body: clamp(0.875rem, 0.5vw + 0.75rem, 1rem);
+    --text-body--line-height: clamp(1.25rem, 0.5vw + 1.1rem, 1.5rem);
 
-    --text-btn-lg: 1.25rem; /* 20px */
-    --text-btn-lg--line-height: 1.5rem; /* 24px */
+    --text-btn-lg: clamp(1rem, 0.5vw + 0.85rem, 1.25rem);
+    --text-btn-lg--line-height: clamp(1.5rem, 1vw + 1.2rem, 1.5rem);
 
-    --text-badge: 0.875rem; /* 14px */
-    --text-badge--line-height: 1.3125rem; /* 21px */
+    --text-badge: clamp(0.75rem, 0.3vw + 0.65rem, 0.875rem);
+    --text-badge--line-height: clamp(1rem, 0.5vw, 1.3125rem);
 
     --animate-tagline-left: tagline-left 10s linear infinite;
     --animate-marquee-left: marquee-left 30s linear infinite;
