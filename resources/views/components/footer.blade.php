@@ -51,13 +51,13 @@
                 <h3 class="text-h3 text-primary-50 mb-1">Social Media</h3>
                 <p class="text-body text-primary-200 mb-4">Mari terhubung dengan kami melalui sosial media!</p>
                 <div class="flex gap-2">
-                    <a href="#" class="size-12 grid place-content-center bg-primary-800 rounded-full">
-                        <img src="/assets/svg/tiktok-icon.svg" alt="Tiktok Toko Brow">
+                    <a href="https://share.google/IrjZ87WYlHWj9ZWxj" target="_blank" class="size-12 grid place-content-center bg-primary-800 rounded-full">
+                        <img src="/assets/svg/google-icon.svg" alt="Google Toko Brow">
                     </a>
-                    <a href="#" class="size-12 grid place-content-center bg-primary-800 rounded-full">
+                    <a href="https://www.instagram.com/toko.brow/" target="_blank" class="size-12 grid place-content-center bg-primary-800 rounded-full">
                         <img src="/assets/svg/instagram-icon.svg" alt="Instagram Toko Brow">
                     </a>
-                    <a href="#" class="size-12 grid place-content-center bg-primary-800 rounded-full">
+                    <a href="https://wa.me/628128328317" target="_blank" class="size-12 grid place-content-center bg-primary-800 rounded-full">
                         <img src="/assets/svg/whatsapp-icon.svg" alt="Whatsapp Toko Brow">
                     </a>
                 </div>

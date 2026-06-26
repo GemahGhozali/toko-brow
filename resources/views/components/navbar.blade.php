@@ -28,14 +28,14 @@
 
         <div class="space-y-4">
             <div class="flex gap-2 justify-center">
-                <a href="#" class="size-10 grid place-content-center bg-primary-800 rounded-full">
-                    <img src="/assets/svg/tiktok-icon.svg" alt="Tiktok" class="size-5">
+                <a href="https://share.google/IrjZ87WYlHWj9ZWxj" target="_blank" class="size-12 grid place-content-center bg-primary-800 rounded-full">
+                    <img src="/assets/svg/google-icon.svg" alt="Google Toko Brow">
                 </a>
-                <a href="#" class="size-10 grid place-content-center bg-primary-800 rounded-full">
-                    <img src="/assets/svg/instagram-icon.svg" alt="Instagram" class="size-5">
+                <a href="https://www.instagram.com/toko.brow/" target="_blank" class="size-12 grid place-content-center bg-primary-800 rounded-full">
+                    <img src="/assets/svg/instagram-icon.svg" alt="Instagram Toko Brow">
                 </a>
-                <a href="#" class="size-10 grid place-content-center bg-primary-800 rounded-full">
-                    <img src="/assets/svg/whatsapp-icon.svg" alt="Whatsapp" class="size-5">
+                <a href="https://wa.me/628128328317" target="_blank" class="size-12 grid place-content-center bg-primary-800 rounded-full">
+                    <img src="/assets/svg/whatsapp-icon.svg" alt="Whatsapp Toko Brow">
                 </a>
             </div>
             <p class="text-sm font-body text-neutral-600 text-center">&copy; Copyright {{ date('Y') }} Toko Brow. <br> All rights reserved.</p>
@@ -56,13 +56,13 @@
     
                 {{-- Social Media --}}
                 <div class="flex gap-2">
-                    <a href="#" class="size-12 grid place-content-center bg-primary-800 rounded-full">
-                        <img src="/assets/svg/tiktok-icon.svg" alt="Tiktok Toko Brow">
+                    <a href="https://share.google/IrjZ87WYlHWj9ZWxj" target="_blank" class="size-12 grid place-content-center bg-primary-800 rounded-full">
+                        <img src="/assets/svg/google-icon.svg" alt="Google Toko Brow">
                     </a>
-                    <a href="#" class="size-12 grid place-content-center bg-primary-800 rounded-full">
+                    <a href="https://www.instagram.com/toko.brow/" target="_blank" class="size-12 grid place-content-center bg-primary-800 rounded-full">
                         <img src="/assets/svg/instagram-icon.svg" alt="Instagram Toko Brow">
                     </a>
-                    <a href="#" class="size-12 grid place-content-center bg-primary-800 rounded-full">
+                    <a href="https://wa.me/628128328317" target="_blank" class="size-12 grid place-content-center bg-primary-800 rounded-full">
                         <img src="/assets/svg/whatsapp-icon.svg" alt="Whatsapp Toko Brow">
                     </a>
                 </div>
