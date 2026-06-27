@@ -26,19 +26,32 @@
             </nav>
         </div>
 
-        <div class="space-y-4">
-            <div class="flex gap-2 justify-center">
-                <a href="https://share.google/IrjZ87WYlHWj9ZWxj" target="_blank" class="size-12 grid place-content-center bg-primary-800 rounded-full">
-                    <img src="/assets/svg/google-icon.svg" alt="Google Toko Brow">
+        <div class="space-y-6">
+            <div class="flex flex-col gap-3 w-full">
+                <a href="{{ url('/register') }}" class="w-full py-3 text-center rounded-lg bg-primary-800 text-white font-medium text-btn transition-colors active:bg-primary-900 shadow-sm">
+                    Register
                 </a>
-                <a href="https://www.instagram.com/toko.brow/" target="_blank" class="size-12 grid place-content-center bg-primary-800 rounded-full">
-                    <img src="/assets/svg/instagram-icon.svg" alt="Instagram Toko Brow">
-                </a>
-                <a href="https://wa.me/628128328317" target="_blank" class="size-12 grid place-content-center bg-primary-800 rounded-full">
-                    <img src="/assets/svg/whatsapp-icon.svg" alt="Whatsapp Toko Brow">
+                <a href="{{ url('/login') }}" class="w-full py-3 text-center rounded-lg border border-primary-800 text-primary-800 text-btn transition-colors active:bg-primary-800/5">
+                    Login
                 </a>
             </div>
-            <p class="text-sm font-body text-neutral-600 text-center">&copy; Copyright {{ date('Y') }} Toko Brow. <br> All rights reserved.</p>
+
+            <div class="w-full border-b border-neutral-300"></div>
+
+            <div class="space-y-4">
+                <div class="flex gap-2 justify-center">
+                    <a href="https://share.google/IrjZ87WYlHWj9ZWxj" target="_blank" class="size-12 grid place-content-center bg-primary-800 rounded-full transition-transform active:scale-95">
+                        <img src="/assets/svg/google-icon.svg" alt="Google Toko Brow">
+                    </a>
+                    <a href="https://www.instagram.com/toko.brow/" target="_blank" class="size-12 grid place-content-center bg-primary-800 rounded-full transition-transform active:scale-95">
+                        <img src="/assets/svg/instagram-icon.svg" alt="Instagram Toko Brow">
+                    </a>
+                    <a href="https://wa.me/628128328317" target="_blank" class="size-12 grid place-content-center bg-primary-800 rounded-full transition-transform active:scale-95">
+                        <img src="/assets/svg/whatsapp-icon.svg" alt="Whatsapp Toko Brow">
+                    </a>
+                </div>
+                <p class="text-sm font-body text-neutral-600 text-center">&copy; Copyright {{ date('Y') }} Toko Brow. <br> All rights reserved.</p>
+            </div>
         </div>
     </div>
 </div>
@@ -50,12 +63,22 @@
         <img src="/assets/svg/logo.svg" alt="Toko Brow Logo" class="h-[128px]">
     
         <div class="grow space-y-3">
+            
             {{-- Top Container --}}
             <div class="flex justify-between items-end">
                 <h3 class="text-h3 text-primary-950">Toko Brow</h3>
     
-                {{-- Social Media --}}
-                <div class="flex gap-2">
+                <div class="flex gap-2 items-center">
+
+                    {{-- Login & Register Button --}}
+                    <a href="{{ url('/login') }}" class="text-primary-900 font-medium text-btn transition-colors duration-300 px-5 py-3 border border-primary-800 text-primary-800 rounded-full">
+                        Login
+                    </a>
+                    <a href="{{ url('/register') }}" class="bg-primary-800 hover:bg-primary-900 text-white text-btn px-5 py-3 rounded-full">
+                        Register
+                    </a>
+
+                    {{-- Social Media --}}
                     <a href="https://share.google/IrjZ87WYlHWj9ZWxj" target="_blank" class="size-12 grid place-content-center bg-primary-800 rounded-full">
                         <img src="/assets/svg/google-icon.svg" alt="Google Toko Brow">
                     </a>
@@ -65,6 +88,7 @@
                     <a href="https://wa.me/628128328317" target="_blank" class="size-12 grid place-content-center bg-primary-800 rounded-full">
                         <img src="/assets/svg/whatsapp-icon.svg" alt="Whatsapp Toko Brow">
                     </a>
+
                 </div>
             </div>
     
