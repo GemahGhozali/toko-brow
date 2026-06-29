@@ -1,12 +1,17 @@
+{{-- Floating Hamburger Menu --}}
 <button id="mobile-menu-trigger" class="size-12 bg-white border border-neutral-300 rounded-full grid place-content-center fixed bottom-6 right-6 z-50 shadow-[0px_0px_24px_0px_rgba(0,_0,_0,_0.3)] lg:hidden transition-transform active:scale-95 cursor-pointer">
     <img src="/assets/svg/menu-icon.svg" alt="Menu Icon" class="size-6">
 </button>
 
+{{-- Mobile Navbar (Collapsed) --}}
 <div id="mobile-drawer" class="fixed inset-0 z-[100] invisible pointer-events-none transition-all duration-300">
+
+    {{-- Backdrop --}}
     <div id="mobile-drawer-backdrop" class="absolute inset-0 bg-primary-950/40 backdrop-blur-sm opacity-0 transition-opacity duration-300"></div>
     
     <div id="mobile-drawer-content" class="absolute right-0 top-0 bottom-0 w-full max-w-[320px] bg-[#F9F6F0] p-8 flex flex-col justify-between shadow-2xl translate-x-full transition-transform duration-300">
         <div>
+            {{-- Toko Brow Logo & Close Button --}}
             <div class="flex justify-between items-start mb-8">
                 <img src="/assets/svg/logo.svg" alt="Toko Brow Logo" class="h-16">
                 <button id="mobile-menu-close" class="size-10 text-primary-950 hover:bg-primary-900/10 rounded-full grid place-content-center transition-colors cursor-pointer">
@@ -16,6 +21,7 @@
                 </button>
             </div>
 
+            {{-- Navlinks --}}
             <nav class="flex flex-col gap-5 text-left">
                 <a href="{{ url('/') }}" class="mobile-nav-link text-xl font-heading text-primary-950 border-b border-neutral-300 pb-2">Beranda</a>
                 <a href="{{ url('/gallery') }}" class="mobile-nav-link text-xl font-heading text-primary-950 border-b border-neutral-300 pb-2">Gallery</a>
@@ -23,6 +29,7 @@
             </nav>
         </div>
 
+        {{-- Login & Register Button --}}
         <div class="space-y-6">
             <div class="flex flex-col gap-3 w-full">
                 <a href="{{ url('/register') }}" class="w-full py-3 text-center rounded-lg bg-primary-800 text-white font-medium text-btn transition-colors active:bg-primary-900 shadow-sm">
@@ -33,9 +40,12 @@
                 </a>
             </div>
 
+            {{-- Breakline --}}
             <div class="w-full border-b border-neutral-300"></div>
 
             <div class="space-y-4">
+
+                {{-- Social Media --}}
                 <div class="flex gap-2 justify-center">
                     <a href="https://share.google/IrjZ87WYlHWj9ZWxj" target="_blank" class="size-12 grid place-content-center bg-primary-800 rounded-full transition-transform active:scale-95">
                         <img src="/assets/svg/google-icon.svg" alt="Google Toko Brow">
@@ -47,12 +57,15 @@
                         <img src="/assets/svg/whatsapp-icon.svg" alt="Whatsapp Toko Brow">
                     </a>
                 </div>
+
+                {{-- Copyright --}}
                 <p class="text-sm font-body text-neutral-600 text-center">&copy; Copyright {{ date('Y') }} Toko Brow. <br> All rights reserved.</p>
             </div>
         </div>
     </div>
 </div>
 
+{{-- Desktop Navbar --}}
 <header class="w-full mt-6 px-8 max-lg:hidden">
     <div class="w-full max-w-7xl mx-auto flex items-center gap-6">
 
