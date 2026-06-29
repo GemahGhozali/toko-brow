@@ -22,3 +22,20 @@ const merchandiseSwiper = new Swiper("#merchandise-swiper", {
         1024: { slidesPerView: 3, spaceBetween: 32 },
     },
 });
+
+const testimonialSwiper = new Swiper("#testimonial-swiper", {
+    modules: [window.SwiperModules.Navigation, window.SwiperModules.Autoplay],
+    grabCursor: true,
+    loop: true,
+    slidesPerView: "auto",
+    centeredSlides: true,
+    navigation: {
+        nextEl: "#testimonial-next-desktop, #testimonial-next-mobile",
+        prevEl: "#testimonial-prev-desktop, #testimonial-prev-mobile",
+    },
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+    },
+});
