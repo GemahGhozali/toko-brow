@@ -64,10 +64,6 @@
             'image' => '/assets/image/shoulder-bag.webp'
         ],
     ];
-
-    $chunks = collect($testimonials)->chunk(3);
-    $topTestimonials = $chunks->get(0)->values();
-    $bottomTestimonials = $chunks->get(1)->values();
 @endphp
 
 <!DOCTYPE html>
@@ -236,10 +232,7 @@
 
                 {{-- Title & Subtitle --}}
                 <span class="inline-block text-badge px-4 py-2.5 mb-3 text-primary-900 bg-primary-200 rounded-full">Merhcandise</span>
-                <h2 class="text-h2 text-primary-50 mb-2">Rilisan Karya Eksklusif dari Toko Brow</h2>
-                <p class="text-body text-primary-200 mb-8 max-sm:mb-6">
-                    Merchandise edisi terbatas dengan desain ilustrasi unik yang dikemas premium dan estetik!
-                </p>
+                <h2 class="text-h2 text-primary-50 mb-8 max-sm:mb-6">Rilisan Karya Eksklusif dari Toko Brow</h2>
                 
                 {{-- Merhcandise Catalogue --}}
                 <div class="relative group max-sm:mx-4">
@@ -260,7 +253,6 @@
                                         <img src="{{ $item['image'] }}" alt="{{ $item['description'] }}" class="w-full h-full object-cover">
                                         <div class="p-6 flex flex-col justify-end absolute inset-0 z-10 bg-[linear-gradient(to_top,rgba(0,0,0,0.8)_0%,rgba(0,0,0,0)_60%)] max-sm:p-4">
                                             <h3 class="text-h3 text-primary-50 mb-1">{{ $item['title'] }}</h3>
-                                            <p class="text-body text-neutral-300 mb-3">{{ $item['description'] }}</p>
                                             <h4 class="font-body text-2xl font-semibold text-primary-300 max-sm:text-xl">{{ $item['price'] }}</h4>
                                         </div>
                                     </div>
@@ -275,17 +267,14 @@
     
         {{-- Tim Kami Section --}}
         <section id="tim-kami" class="pt-32 pb-16 px-8 max-sm:px-4 max-lg:py-16 max-lg:pb-8">
-            <div class="w-full max-w-7xl mx-auto">
+            <div class="w-full max-w-7xl mx-auto text-center">
                 
                 {{-- Title & Subtitle --}}
-                <span class="inline-block text-badge px-4 py-2.5 mb-3 text-primary-900 bg-primary-200 rounded-full">Tim Kami</span>
-                <h2 class="text-h2 text-primary-950 mb-2">Wajah-Wajah di Balik Toko Brow</h2>
-                <p class="text-body text-neutral-600 mb-8 max-sm:mb-4 max-lg:mb-6">
-                    Mereka yang meramu rasa, merajut cerita, dan menuangkan kehangatan di setiap sudut Toko Brow
-                </p>
+                <span class="inline-block text-badge px-4 py-2.5 mb-3 text-primary-900 bg-primary-200 rounded-full">Tim Toko Brow</span>
+                <h2 class="text-h2 text-primary-950 mb-8 max-sm:mb-6">Kenali Wajah-Wajah di Balik Toko Brow</h2>
         
                 {{-- Team Images --}}
-                <div class="grid grid-cols-3 gap-8 max-sm:gap-4 max-sm:grid-cols-1 max-lg:grid-cols-2 max-lg:grid-rows-2 max-lg:gap-6">
+                <div class="text-start grid grid-cols-3 gap-8 max-sm:gap-4 max-sm:grid-cols-1 max-lg:grid-cols-2 max-lg:grid-rows-2 max-lg:gap-6">
 
                     <div class="rounded-[32px] bg-primary-50 border border-primary-950 overflow-hidden relative">
                         <img src="/assets/image/lubech.webp" alt="Lubech sebagai owner dari Toko Brow" class="size-full object-cover">
@@ -315,70 +304,75 @@
             </div>
         </section>
     
-        {{-- Testimoni Pelanggan Section --}}
-        <section id="testimoni-pelanggan" class="py-16 text-center max-lg:pt-8">
-    
-            {{-- Title & Subtitle --}}
-            <div class="px-8 max-sm:px-4">
-                <span class="inline-block text-badge px-4 py-2.5 mb-3 text-primary-900 bg-primary-200 rounded-full">Testimoni Pelanggan</span>
-                <h2 class="text-h2 text-primary-950 mb-2">Apa Yang Pelanggan Katakan Tentang Kami?</h2>
-                <p class="text-body text-neutral-600 mb-8">
-                    Kisah jujur dari mereka yang telah menemukan ketenangan ruang dan kehangatan rasa di Toko Brow
-                </p>
-            </div>
+       {{-- Testimoni Pelanggan Section --}}
+        <section id="testimoni-pelanggan" class="py-16 max-lg:py-8 overflow-x-hidden w-full">
             
-            {{-- Testimonial Infinite Sliders --}}
-            <div class="text-start overflow-hidden space-y-8 [mask-image:linear-gradient(to_right,transparent_0%,black_15%,black_85%,transparent_100%)]">
-                <div class="flex justify-start gap-8 animate-marquee-left hover:[animation-play-state:paused]">
-                    @for ($i = 0; $i < 6; $i++)
-                        @php $item = $topTestimonials[$i % 3];@endphp
-    
-                        <div class="max-w-[558px] bg-primary-50 rounded-2xl p-5 shrink-0 transition-shadow duration-300 cursor-pointer hover:ring-2 hover:ring-inset hover:ring-primary-800">
-                            <h4 class="text-h4 text-primary-950 mb-3">{{ $item['title'] }}</h4>
-                            <p class="text-body text-neutral-600">{{ $item['testimonial'] }}</p>
-                            <hr class="border-neutral-300 my-6">
-                            <div class="flex justify-between items-end">
-                                <div class="flex items-center gap-3">
-                                    <img src="/assets/image/image-placeholder.webp" alt="Timotius Lubech - Owner dari Toko Brow" class="size-[56px] rounded-full border border-neutral-300">
-                                    <div class="space-y-0.5">
-                                        <h5 class="text-h5 text-primary-950">{{ $item['name'] }}</h5>
-                                        <p class="text-body text-neutral-600">{{ $item['role'] }}</p>
-                                    </div>
-                                </div>
-                                <div class="bg-primary-800 py-1.5 pl-2.5 pr-3 rounded-full text-badge flex items-center gap-2 text-primary-50">
-                                    <img src="/assets/svg/star-icon.svg" alt="Star Icon" class="size-4">
-                                    <span>{{ number_format($item['rating'], 1) }}</span>
-                                </div>
-                            </div>
-                        </div>
-                    @endfor
-                </div>
-                <div class="flex justify-end gap-8 animate-marquee-right hover:[animation-play-state:paused]">
-                    @for ($i = 0; $i < 6; $i++)
-                        @php $item = $bottomTestimonials[$i % 3];@endphp
-    
-                        <div class="max-w-[558px] bg-primary-50 rounded-2xl p-5 shrink-0 transition-shadow duration-300 cursor-pointer hover:ring-2 hover:ring-inset hover:ring-primary-800">
-                            <h4 class="text-h4 text-primary-950 mb-3">{{ $item['title'] }}</h4>
-                            <p class="text-body text-neutral-600">{{ $item['testimonial'] }}</p>
-                            <hr class="border-neutral-300 my-6">
-                            <div class="flex justify-between items-end">
-                                <div class="flex items-center gap-3">
-                                    <img src="/assets/image/image-placeholder.webp" alt="Timotius Lubech - Owner dari Toko Brow" class="size-[56px] rounded-full border border-neutral-300">
-                                    <div class="space-y-0.5">
-                                        <h5 class="text-h5 text-primary-950">{{ $item['name'] }}</h5>
-                                        <p class="text-body text-neutral-600">{{ $item['role'] }}</p>
-                                    </div>
-                                </div>
-                                <div class="bg-primary-800 py-1.5 pl-2.5 pr-3 rounded-full text-badge flex items-center gap-2 text-primary-50">
-                                    <img src="/assets/svg/star-icon.svg" alt="Star Icon" class="size-4">
-                                    <span>{{ number_format($item['rating'], 1) }}</span>
-                                </div>
-                            </div>
-                        </div>
-                    @endfor
+            <div class="px-8 max-sm:px-4">
+                {{-- Header Container --}}
+                <div class="w-full max-w-7xl mx-auto flex flex-col lg:flex-row lg:justify-between lg:items-end mb-8 max-sm:mb-6 gap-6">
+                    <div class="max-lg:text-center">
+                        <span class="inline-block text-badge px-4 py-2.5 mb-3 text-primary-900 bg-primary-200 rounded-full">Testimoni Pelanggan</span>
+                        <h2 class="text-h2 text-primary-950">Pendapat Jujur Pelanggan Tentang Kami!</h2>
+                    </div>
+                    
+                    {{-- Desktop Prev & Next Button --}}
+                    <div class="hidden lg:flex gap-2">
+                        <button id="testimonial-prev-desktop" class="size-12 bg-primary-800 text-primary-50 grid place-content-center cursor-pointer rounded-full transition-all hover:bg-primary-900 active:scale-95 shadow-sm">
+                            <img src="/assets/svg/chevron-left-icon.svg" alt="Chevron Left Icon">
+                        </button>
+                        <button id="testimonial-next-desktop" class="size-12 bg-primary-800 text-primary-50 grid place-content-center cursor-pointer rounded-full transition-all hover:bg-primary-900 active:scale-95 shadow-sm">
+                            <img src="/assets/svg/chevron-right-icon.svg" alt="Chevron Right Icon">
+                        </button>
+                    </div>
                 </div>
             </div>
-    
+
+            {{-- Swiper Container --}}
+            <div id="testimonial-swiper" class="swiper w-full invisible-scrollbar [mask-image:linear-gradient(to_right,transparent_0%,black_15%,black_85%,transparent_100%)] max-sm:[mask-image:none]">
+                <div class="swiper-wrapper text-start items-stretch">
+                    
+                    @foreach ($testimonials as $item)
+                        <div class="swiper-slide !h-auto max-w-[558px] flex select-none px-4 max-sm:text-center">
+                            <div class="w-full h-full bg-primary-50 rounded-2xl p-6 border border-neutral-200/60 transition-all duration-300 hover:ring-2 hover:ring-inset hover:ring-primary-800 flex flex-col justify-between">
+                                <div>
+                                    <h4 class="text-h4 text-primary-950 mb-3">{{ $item['title'] }}</h4>
+                                    <p class="text-body text-neutral-600 leading-relaxed mb-6">{{ $item['testimonial'] }}</p>
+                                </div>
+                                <div class="mt-auto">
+                                    <hr class="border-neutral-300 mb-6">
+                                    <div class="flex sm:justify-between sm:items-end max-sm:flex-col max-sm:items-center max-sm:gap-4">
+                                        <div class="flex items-center gap-3 max-sm:flex-col max-sm:items-center">
+                                            <img src="/assets/image/image-placeholder.webp" alt="{{ $item['name'] }}" class="size-[56px] rounded-full border border-neutral-300 object-cover">
+                                            <div class="space-y-0.5">
+                                                <h5 class="text-h5 text-primary-950 font-bold">{{ $item['name'] }}</h5>
+                                                <p class="text-body text-neutral-600 text-sm">{{ $item['role'] }}</p>
+                                            </div>
+                                        </div>
+                                        <div class="bg-primary-900 py-1.5 pl-2.5 pr-3 rounded-full text-badge flex items-center gap-2 text-primary-50 font-medium whitespace-nowrap">
+                                            <img src="/assets/svg/star-icon.svg" alt="Star Icon" class="size-4">
+                                            <span>{{ number_format($item['rating'], 1) }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+
+                </div>
+            </div>
+
+            {{-- Mobile Prev & Next Button --}}
+            <div class="w-full max-w-7xl mx-auto px-8 max-sm:px-4">
+                <div class="flex lg:hidden gap-2 justify-center mt-10">
+                    <button id="testimonial-prev-mobile" class="size-12 bg-primary-800 text-primary-50 grid place-content-center cursor-pointer rounded-full transition-all hover:bg-primary-900 active:scale-95 shadow-sm">
+                        <img src="/assets/svg/chevron-left-icon.svg" alt="Chevron Left Icon">
+                    </button>
+                    <button id="testimonial-next-mobile" class="size-12 bg-primary-800 text-primary-50 grid place-content-center cursor-pointer rounded-full transition-all hover:bg-primary-900 active:scale-95 shadow-sm">
+                        <img src="/assets/svg/chevron-right-icon.svg" alt="Chevron Right Icon">
+                    </button>
+                </div>
+            </div>
+
         </section>
     
         {{-- Footer --}}
