@@ -48,8 +48,7 @@
 
             {{-- Social Media --}}
             <div>
-                <h3 class="text-h3 text-primary-50 mb-1">Social Media</h3>
-                <p class="text-body text-primary-200 mb-4">Mari terhubung dengan kami melalui sosial media!</p>
+                <h3 class="text-h3 text-primary-50 mb-6">Social Media</h3>
                 <div class="flex gap-2">
                     <a href="https://share.google/IrjZ87WYlHWj9ZWxj" target="_blank" class="size-12 grid place-content-center bg-primary-800 rounded-full">
                         <img src="/assets/svg/google-icon.svg" alt="Google Toko Brow">
@@ -69,8 +68,7 @@
 
         {{-- Toko Brow Location --}}
         <div class="flex-1 flex flex-col">
-            <h3 class="text-h3 text-primary-50 mb-1">Lokasi Toko Brow</h3>
-            <p class="text-body text-primary-200 mb-6">Vorvo, Jl. Kedondong No. 17, Gn. Kelua, Kec. Samarinda Ulu, Kota Samarinda, Kalimantan Timur 75123</p>
+            <h3 class="text-h3 text-primary-50 mb-6">Lokasi Toko Brow</h3>
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.683809472745!2d117.14574599999999!3d-0.47047979999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df67f0012381fe9%3A0xdf6e393887da0372!2sToko%20brow!5e0!3m2!1sid!2sid!4v1782353418686!5m2!1sid!2sid" 
                 allowfullscreen="true" 
