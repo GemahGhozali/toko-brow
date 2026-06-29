@@ -18,10 +18,7 @@
 
             <nav class="flex flex-col gap-5 text-left">
                 <a href="{{ url('/') }}" class="mobile-nav-link text-xl font-heading text-primary-950 border-b border-neutral-300 pb-2">Beranda</a>
-                <a href="{{ url('/#tentang-kami') }}" class="mobile-nav-link text-xl font-heading text-primary-950 border-b border-neutral-300 pb-2">Tentang Kami</a>
-                <a href="{{ url('/#merchandise') }}" class="mobile-nav-link text-xl font-heading text-primary-950 border-b border-neutral-300 pb-2">Merchandise</a>
-                <a href="{{ url('/#tim-kami') }}" class="mobile-nav-link text-xl font-heading text-primary-950 border-b border-neutral-300 pb-2">Tim Kami</a>
-                <a href="{{ url('/#testimoni-pelanggan') }}" class="mobile-nav-link text-xl font-heading text-primary-950 border-b border-neutral-300 pb-2">Testimoni Pelanggan</a>
+                <a href="{{ url('/gallery') }}" class="mobile-nav-link text-xl font-heading text-primary-950 border-b border-neutral-300 pb-2">Gallery</a>
                 <a href="{{ url('/e-book') }}" class="mobile-nav-link text-xl font-heading text-primary-950 border-b border-neutral-300 pb-2">E-Book</a>
             </nav>
         </div>
@@ -63,45 +60,31 @@
         <img src="/assets/svg/logo.svg" alt="Toko Brow Logo" class="h-[128px]">
     
         <div class="grow space-y-3">
-            
-            {{-- Top Container --}}
-            <div class="flex justify-between items-end">
-                <h3 class="text-h3 text-primary-950">Toko Brow</h3>
-    
-                <div class="flex gap-2 items-center">
 
-                    {{-- Login & Register Button --}}
+            <div class="flex justify-between items-end gap-4">
+
+                {{-- Brand Name --}}
+                <h3 class="text-h3 text-primary-950">Toko Brow</h3>
+
+                {{-- Login & Register Button --}}
+                <div class="flex gap-2 items-center">
                     <a href="{{ url('/login') }}" class="text-primary-900 font-medium text-btn transition-colors duration-300 px-5 py-3 border border-primary-800 text-primary-800 rounded-full">
                         Login
                     </a>
                     <a href="{{ url('/register') }}" class="bg-primary-800 hover:bg-primary-900 text-white text-btn px-5 py-3 rounded-full">
                         Register
                     </a>
-
-                    {{-- Social Media --}}
-                    <a href="https://share.google/IrjZ87WYlHWj9ZWxj" target="_blank" class="size-12 grid place-content-center bg-primary-800 rounded-full">
-                        <img src="/assets/svg/google-icon.svg" alt="Google Toko Brow">
-                    </a>
-                    <a href="https://www.instagram.com/toko.brow/" target="_blank" class="size-12 grid place-content-center bg-primary-800 rounded-full">
-                        <img src="/assets/svg/instagram-icon.svg" alt="Instagram Toko Brow">
-                    </a>
-                    <a href="https://wa.me/628128328317" target="_blank" class="size-12 grid place-content-center bg-primary-800 rounded-full">
-                        <img src="/assets/svg/whatsapp-icon.svg" alt="Whatsapp Toko Brow">
-                    </a>
-
                 </div>
+
             </div>
     
             {{-- Breakline --}}
-            <div class="w-full border border-primary-900 rounded-full"></div>
-    
+            <div class="w-full border-t border-primary-900 rounded-full"></div>
+            
             {{-- Navlinks --}}
             <nav class="flex gap-6">
                 <a href="{{ url('/') }}" class="text-body {{ Request::is('/') ? 'text-primary-600 font-bold' : 'text-primary-900' }}">Beranda</a>
-                <a href="{{ url('/#tentang-kami') }}" class="text-body text-primary-900">Tentang Kami</a>
-                <a href="{{ url('/#merchandise') }}" class="text-body text-primary-900">Merchandise</a>
-                <a href="{{ url('/#tim-kami') }}" class="text-body text-primary-900">Tim Kami</a>
-                <a href="{{ url('/#testimoni-pelanggan') }}" class="text-body text-primary-900">Testimoni Pelanggan</a>
+                <a href="{{ url('/gallery') }}" class="text-body {{ Request::is('gallery') ? 'text-primary-600 font-bold' : 'text-primary-900' }}">Gallery</a>
                 <a href="{{ url('/e-book') }}" class="text-body {{ Request::is('e-book') ? 'text-primary-600 font-bold' : 'text-primary-900' }}">E-Book</a>
             </nav>
         </div>
