@@ -82,7 +82,7 @@
         <x-navbar/>
     
         {{-- Hero Section --}}
-        <section class="pt-16 max-sm:px-4 max-lg:pt-8">
+        <section class="pt-16 max-sm:px-6 px-8 max-lg:pt-8">
             <div class="w-full max-w-7xl mx-auto flex items-center lg:gap-6 max-lg:flex-col">
         
                 {{-- Section Content --}}
@@ -118,8 +118,8 @@
         </section>
     
         {{-- Tentang Kami Section --}}
-        <section id="tentang-kami" class="px-8 py-32 max-lg:pb-8 max-lg:pt-16 max-sm:px-4 max-sm:pb-4">
-            <div class="w-full max-w-7xl mx-auto flex gap-16 max-md:gap-4 max-lg:flex-col max-xl:gap-8">
+        <section id="tentang-kami" class="px-8 py-32 max-lg:pb-8 max-lg:pt-16 max-sm:px-6 max-sm:pb-6">
+            <div class="w-full max-w-7xl mx-auto flex gap-16 max-md:gap-6 max-lg:flex-col max-xl:gap-8">
     
                 {{-- Section Image --}}
                 <div class="group relative flex-1 rounded-4xl max-lg:aspect-[13/16] max-lg:order-1 overflow-hidden">
@@ -182,7 +182,7 @@
         </section>
 
         {{-- Merchandise Section --}}
-        <section id="merchandise" class="w-full bg-primary-950 py-32 px-8 max-sm:px-4 max-md:py-16">
+        <section id="merchandise" class="w-full bg-primary-950 py-32 px-8 max-sm:px-6 max-md:py-16">
             <div class="w-full max-w-7xl mx-auto text-center">
 
                 {{-- Title & Subtitle --}}
@@ -221,7 +221,7 @@
         </section>
     
         {{-- Tim Kami Section --}}
-        <section id="tim-kami" class="pt-32 pb-16 px-8 max-sm:px-4 max-lg:py-16 max-lg:pb-8">
+        <section id="tim-kami" class="pt-32 pb-16 px-8 max-sm:px-6 max-lg:py-16 max-lg:pb-8">
             <div class="w-full max-w-7xl mx-auto text-center">
                 
                 {{-- Title & Subtitle --}}
@@ -229,7 +229,7 @@
                 <h2 class="text-h2 text-primary-950 mb-8 max-sm:mb-6">Kenali Wajah-Wajah di Balik Toko Brow</h2>
         
                 {{-- Team Images --}}
-                <div class="text-start grid grid-cols-3 gap-8 max-sm:gap-4 max-sm:grid-cols-1 max-lg:grid-cols-2 max-lg:grid-rows-2 max-lg:gap-6">
+                <div class="text-start grid grid-cols-3 gap-8 max-sm:gap-6 max-sm:grid-cols-1 max-lg:grid-cols-2 max-lg:grid-rows-2 max-lg:gap-6">
 
                     <div class="rounded-[32px] bg-primary-50 border border-primary-950 overflow-hidden relative group">
                         <img src="/assets/image/lubech.webp" alt="Lubech sebagai owner dari Toko Brow" class="size-full object-cover duration-500 group-hover:scale-110">
@@ -287,7 +287,7 @@
                 <div class="swiper-wrapper text-start items-stretch">
                     
                     @foreach ($testimonials as $item)
-                        <div class="swiper-slide !h-auto max-w-[558px] flex select-none px-4 max-sm:text-center">
+                        <div class="swiper-slide !h-auto max-w-[558px] flex select-none px-4 max-sm:px-6 max-sm:text-center">
                             <div class="w-full h-full bg-primary-50 rounded-2xl p-6 border border-neutral-200/60 transition-all duration-300 hover:ring-2 hover:ring-inset hover:ring-primary-800 flex flex-col justify-between">
                                 <div>
                                     <h4 class="text-h4 text-primary-950 mb-3">{{ $item['title'] }}</h4>
