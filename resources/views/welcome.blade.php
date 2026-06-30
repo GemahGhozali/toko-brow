@@ -107,43 +107,11 @@
                         </a>
                     </div>
         
-                    {{-- Social Proof (Dekstop) --}}
-                    <div class="flex items-center gap-4 max-lg:hidden">
-                        <div class="flex">
-                            <img src="/assets/image/image-placeholder.webp" alt="Toko Brow Client Image Placholder" class="size-[50px] rounded-full border border-neutral-400">
-                            <img src="/assets/image/image-placeholder.webp" alt="Toko Brow Client Image Placholder" class="size-[50px] rounded-full border border-neutral-400 -ml-4">
-                            <img src="/assets/image/image-placeholder.webp" alt="Toko Brow Client Image Placholder" class="size-[50px] rounded-full border border-neutral-400 -ml-4">
-                        </div>
-                        <div class="space-y-0.5">
-                            <div class="text-body font-bold text-primary-950 flex items-center gap-1.5">
-                                <img src="/assets/svg/star-icon.svg" alt="Star Icon" class="size-4">
-                                <p>4.8 Total Rating</p>
-                            </div>
-                            <p class="text-body text-neutral-600">Ulasan nyata dari pelanggan setia kami!</p>
-                        </div>
-                    </div>
-        
                 </div>
         
                 {{-- Section Image --}}
                 <div class="flex-1">
                     <img src="/assets/image/toko-brow-cafe.webp" alt="Toko Brow">
-                </div>
-        
-                {{-- Social Proof (Mobile) --}}
-                <div class="flex flex-col items-center gap-4 mt-8 lg:hidden">
-                    <div class="flex">
-                        <img src="/assets/image/image-placeholder.webp" alt="Toko Brow Client Image Placholder" class="size-[50px] rounded-full border border-neutral-400">
-                        <img src="/assets/image/image-placeholder.webp" alt="Toko Brow Client Image Placholder" class="size-[50px] rounded-full border border-neutral-400 -ml-4">
-                        <img src="/assets/image/image-placeholder.webp" alt="Toko Brow Client Image Placholder" class="size-[50px] rounded-full border border-neutral-400 -ml-4">
-                    </div>
-                    <div class="flex flex-col items-center text-center">
-                        <p class="font-body text-sm font-bold text-primary-950 flex items-center gap-1.5">
-                            <img src="/assets/svg/star-icon.svg" alt="Star Icon" class="size-4">
-                            <span>4.8 Total Rating</span>
-                        </p>
-                        <p class="font-body text-sm text-neutral-600">Ulasan nyata dari pelanggan setia kami!</p>
-                    </div>
                 </div>
         
             </div>
