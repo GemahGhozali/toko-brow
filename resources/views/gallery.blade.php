@@ -67,9 +67,17 @@
                         data-path="{{ $item['path'] }}" 
                         data-desc="{{ $item['description'] }}"
                     >
-                        <img src="{{ $item['path'] }}" alt="{{ $item['description'] }}" class="w-full h-auto object-cover block transition-transform duration-500 group-hover:scale-105" loading="lazy" decoding="async">
+                        <div class="skeleton-loader w-full aspect-[4/3] bg-neutral-300 animate-pulse rounded-2xl"></div>
+
+                        <img 
+                            src="{{ $item['path'] }}" 
+                            alt="{{ $item['description'] }}" 
+                            class="gallery-img w-full h-auto object-cover block transition-all duration-500 group-hover:scale-105 opacity-0" 
+                            loading="lazy" 
+                            decoding="async"
+                            onload="imageLoaded(this)"
+                        >
                         
-                        {{-- Hover Effect --}}
                         <div class="absolute inset-0 bg-gradient-to-t from-primary-950/90 via-primary-950/40 to-transparent flex flex-col justify-end p-6 opacity-0 translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
                             <h3 class="text-h4 text-primary-50 mb-1 font-bold">{{ $item['title'] }}</h3>
                             <p class="text-body text-neutral-300 text-sm leading-relaxed">{{ $item['description'] }}</p>
@@ -102,6 +110,15 @@
     <x-footer/>
 
     <script>
+        function imageLoaded(imgElement) {
+            const card = imgElement.closest('.gallery-card');
+            const skeleton = card.querySelector('.skeleton-loader');
+            
+            if (skeleton) skeleton.remove(); 
+            
+            imgElement.classList.remove('opacity-0');
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
             const modal = document.getElementById('gallery-modal');
             const modalImg = document.getElementById('modal-target-img');
