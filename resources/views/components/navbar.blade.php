@@ -96,9 +96,9 @@
             
             {{-- Navlinks --}}
             <nav class="flex gap-6">
-                <a href="{{ url('/') }}" class="text-body {{ Request::is('/') ? 'text-primary-600 font-bold' : 'text-primary-900' }}">Beranda</a>
-                <a href="{{ url('/gallery') }}" class="text-body {{ Request::is('gallery') ? 'text-primary-600 font-bold' : 'text-primary-900' }}">Gallery</a>
-                <a href="{{ url('/e-book') }}" class="text-body {{ Request::is('e-book') ? 'text-primary-600 font-bold' : 'text-primary-900' }}">E-Book</a>
+                <a href="{{ url('/') }}" class="text-body duration-300 hover:text-primary-600 {{ Request::is('/') ? 'text-primary-600 font-bold' : 'text-primary-900' }}">Beranda</a>
+                <a href="{{ url('/gallery') }}" class="text-body duration-300 hover:text-primary-600 {{ Request::is('gallery') ? 'text-primary-600 font-bold' : 'text-primary-900' }}">Gallery</a>
+                <a href="{{ url('/e-book') }}" class="text-body duration-300 hover:text-primary-600 {{ Request::is('e-book') ? 'text-primary-600 font-bold' : 'text-primary-900' }}">E-Book</a>
             </nav>
         </div>
         
