@@ -1,37 +1,45 @@
 @php
-    $galleries = [
-        [
-            'path' => '/assets/image/toko-brow-crew-table.webp',
-            'title' => 'Galley 1',
-            'description' => 'Image Description Here...'
-        ],
-        [
-            'path' => '/assets/image/toko-brow-cafe.webp',
-            'title' => 'Galley 2',
-            'description' => 'Image Description Here...'
-        ],
-        [
-            'path' => '/assets/image/lubech.webp',
-            'title' => 'Galley 3',
-            'description' => 'Image Description Here...'
-        ],
-        [
-            'path' => '/assets/image/toko-brow-crew.webp',
-            'title' => 'Galley 4',
-            'description' => 'Image Description Here...'
-        ],
-        [
-            'path' => '/assets/image/lubech.webp',
-            'title' => 'Galley 5',
-            'description' => 'Image Description Here...'
-        ],
-        [
-            'path' => '/assets/image/toko-brow-cafe.webp',
-            'title' => 'Galley 6',
-            'description' => 'Image Description Here...'
-        ],
+    /*
         
-    ];
+        Load semua file gambar yang ada didalam folder /assets/gallery/
+        
+        Nama file memiliki format : 
+        - "Judul Foto__Deskripsi Foto"
+        - "Judul Foto" (Tanpa Deskripsi)
+
+        Semua informasi seperti judul dan deskripsi foto akan diekstrak secara otomatis berdasarkan nama file
+
+    */
+
+    $dirPath = public_path('assets/gallery');
+    $galleries = [];
+
+    if (file_exists($dirPath)) {
+        $files = glob($dirPath . '/*.{webp,jpg,jpeg,png}', GLOB_BRACE);
+
+        foreach ($files as $file) {
+            $filename = basename($file);
+            
+            $cleanName = pathinfo($filename, PATHINFO_FILENAME); 
+
+            $parts = explode('__', $cleanName);
+
+            if (count($parts) >= 2) {
+                $title = ucwords($parts[0]);
+                $description = $parts[1];
+            } else {
+                $title = ucwords($cleanName);
+                $description = "Koleksi Galeri Toko Brow";
+            }
+
+            $galleries[] = [
+                'path' => '/assets/gallery/' . $filename,
+                'alt' => $title,
+                'title' => $title,
+                'description' => $description
+            ];
+        }
+    }
 @endphp
 
 <!DOCTYPE html>
@@ -59,7 +67,7 @@
                         data-path="{{ $item['path'] }}" 
                         data-desc="{{ $item['description'] }}"
                     >
-                        <img src="{{ $item['path'] }}" alt="{{ $item['description'] }}" class="w-full h-auto object-cover block transition-transform duration-500 group-hover:scale-105">
+                        <img src="{{ $item['path'] }}" alt="{{ $item['description'] }}" class="w-full h-auto object-cover block transition-transform duration-500 group-hover:scale-105" loading="lazy" decoding="async">
                         
                         {{-- Hover Effect --}}
                         <div class="absolute inset-0 bg-gradient-to-t from-primary-950/90 via-primary-950/40 to-transparent flex flex-col justify-end p-6 opacity-0 translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
