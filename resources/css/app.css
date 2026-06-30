@@ -44,36 +44,6 @@
 
     --text-badge: clamp(0.75rem, 0.3vw + 0.65rem, 0.875rem);
     --text-badge--line-height: clamp(1rem, 0.5vw, 1.3125rem);
-
-    --animate-tagline-left: tagline-left 10s linear infinite;
-    --animate-marquee-left: marquee-left 30s linear infinite;
-    --animate-marquee-right: marquee-right 30s linear infinite;
-
-    @keyframes tagline-left {
-        from {
-            transform: translateX(0);
-        }
-        to {
-            transform: translateX(-735.88px);
-        }
-    }
-
-    @keyframes marquee-left {
-        from {
-            transform: translateX(0);
-        }
-        to {
-            transform: translateX(-1770px);
-        }
-    }
-    @keyframes marquee-right {
-        from {
-            transform: translateX(0);
-        }
-        to {
-            transform: translateX(1770px);
-        }
-    }
 }
 
 @layer utilities {

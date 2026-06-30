@@ -82,7 +82,7 @@
         <x-navbar/>
     
         {{-- Hero Section --}}
-        <section class="py-16 px-8 max-sm:px-4 max-lg:pt-8">
+        <section class="pt-16 max-sm:px-4 max-lg:pt-8">
             <div class="w-full max-w-7xl mx-auto flex items-center lg:gap-6 max-lg:flex-col">
         
                 {{-- Section Content --}}
@@ -116,23 +116,6 @@
         
             </div>
         </section>
-    
-        {{-- Tagline Ribbon --}}
-        <div class="relative">
-            <div class="h-20 bg-primary-800 absolute inset-0 rotate-[-2.5deg] -skew-x-[10deg]"></div>
-            <div class="overflow-hidden bg-primary-950 px-6 py-4 relative z-10">
-                <div class="flex flex-nowrap justify-start gap-8 text-nowrap animate-tagline-left">
-                    @for ($i = 0; $i < 4; $i++)
-                        <h3 class="text-[32px] font-heading font-bold text-primary-50">Brownies</h3>
-                        <img src="/assets/svg/four-star-icon.svg" alt="Four Star Icon">
-                        <h3 class="text-[32px] font-heading font-bold text-primary-50">Koffiee</h3>
-                        <img src="/assets/svg/four-star-icon.svg" alt="Four Star Icon">
-                        <h3 class="text-[32px] font-heading font-bold text-primary-50">Relaxing Spot</h3>
-                        <img src="/assets/svg/four-star-icon.svg" alt="Four Star Icon">
-                    @endfor
-                </div>
-            </div>
-        </div>
     
         {{-- Tentang Kami Section --}}
         <section id="tentang-kami" class="px-8 py-32 max-lg:pb-8 max-lg:pt-16 max-sm:px-4 max-sm:pb-4">
