@@ -15,9 +15,9 @@
         </div>
 
         {{-- CTA Button --}}
-        <a href="https://maps.app.goo.gl/KYKnx3eswVZzjV2J8" target="_blank" class="w-fit shrink-0 bg-primary-800 text-white rounded-xl text-btn-lg py-4 pl-6 pr-4 flex justify-center items-center gap-2 max-lg:w-full">
+        <a href="https://maps.app.goo.gl/KYKnx3eswVZzjV2J8" target="_blank" class="group w-fit shrink-0 bg-primary-800 hover:bg-primary-900 hover:gap-3 duration-300 text-white rounded-xl text-btn-lg py-4 pl-6 pr-4 flex justify-center items-center gap-2 max-lg:w-full">
             <span>Berkunjung Sekarang</span>
-            <img src="/assets/svg/arrow-right-up-icon.svg" alt="Arrow Right Up Icon">
+            <img src="/assets/svg/arrow-right-up-icon.svg" alt="Arrow Right Up Icon" class="group-hover:scale-110 duration-300 transition-transform">
         </a>
 
     </header>
@@ -50,13 +50,13 @@
             <div>
                 <h3 class="text-h3 text-primary-50 mb-6">Social Media</h3>
                 <div class="flex gap-2">
-                    <a href="https://share.google/IrjZ87WYlHWj9ZWxj" target="_blank" class="size-12 grid place-content-center bg-primary-800 rounded-full">
+                    <a href="https://share.google/IrjZ87WYlHWj9ZWxj" target="_blank" class="size-12 grid place-content-center bg-primary-800 rounded-full duration-300 hover:bg-primary-900 hover:scale-110">
                         <img src="/assets/svg/google-icon.svg" alt="Google Toko Brow">
                     </a>
-                    <a href="https://www.instagram.com/toko.brow/" target="_blank" class="size-12 grid place-content-center bg-primary-800 rounded-full">
+                    <a href="https://www.instagram.com/toko.brow/" target="_blank" class="size-12 grid place-content-center bg-primary-800 rounded-full duration-300 hover:bg-primary-900 hover:scale-110">
                         <img src="/assets/svg/instagram-icon.svg" alt="Instagram Toko Brow">
                     </a>
-                    <a href="https://wa.me/628128328317" target="_blank" class="size-12 grid place-content-center bg-primary-800 rounded-full">
+                    <a href="https://wa.me/628128328317" target="_blank" class="size-12 grid place-content-center bg-primary-800 rounded-full duration-300 hover:bg-primary-900 hover:scale-110">
                         <img src="/assets/svg/whatsapp-icon.svg" alt="Whatsapp Toko Brow">
                     </a>
                 </div>

@@ -97,12 +97,12 @@
         
                     {{-- CTA Buttons --}}
                     <div class="flex items-center gap-8 mb-16 max-sm:flex-col max-sm:gap-6 max-sm:*:w-full max-lg:justify-center max-lg:mb-6">
-                        <a href="#merchandise" class="bg-primary-800 text-white rounded-lg text-btn-lg py-4 pl-6 pr-4 flex justify-center items-center gap-2">
+                        <a href="#merchandise" class="bg-primary-800 hover:bg-primary-900 hover:gap-3 duration-300 text-white rounded-lg text-btn-lg py-4 pl-6 pr-4 flex justify-center items-center gap-2">
                             <span>Lihat Produk Kami</span>
                             <img src="/assets/svg/arrow-right-icon.svg" alt="Arrow Right Icon">
                         </a>
-                        <a href="#tentang-kami" class="text-primary-800 text-btn-lg flex justify-center items-center gap-2">
-                            <img src="/assets/svg/play-icon.svg" alt="Play Icon">
+                        <a href="#tentang-kami" class="text-primary-800 text-btn-lg flex justify-center items-center gap-2 group hover:text-primary-900 hover:gap-3 duration-300">
+                            <img src="/assets/svg/play-icon.svg" alt="Play Icon" class="group-hover:scale-110 duration-300">
                             <span>Cerita Kami</span>
                         </a>
                     </div>
@@ -139,7 +139,11 @@
             <div class="w-full max-w-7xl mx-auto flex gap-16 max-md:gap-4 max-lg:flex-col max-xl:gap-8">
     
                 {{-- Section Image --}}
-                <div class="flex-1 rounded-4xl bg-cover bg-center bg-no-repeat max-lg:aspect-[13/16] max-lg:order-1" style="background-image: url('/assets/image/toko-brow-crew-table.webp');"></div>
+                <div class="group relative flex-1 rounded-4xl max-lg:aspect-[13/16] max-lg:order-1 overflow-hidden">
+                    <div class="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-110" 
+                        style="background-image: url('/assets/image/toko-brow-crew-table.webp');">
+                    </div>
+                </div>
         
                 {{-- Section Content --}}
                 <div class="flex-1">
@@ -183,7 +187,7 @@
                     </div>
         
                     {{-- CTA Button --}}
-                    <a href="https://www.instagram.com/reels/DZd4abNKLnK/" target="_blank" class="w-fit bg-primary-800 text-white rounded-xl text-btn-lg py-4 pl-6 pr-4 flex justify-center items-center gap-2 max-md:w-full">
+                    <a href="https://www.instagram.com/reels/DZd4abNKLnK/" target="_blank" class="w-fit bg-primary-800 hover:bg-primary-900 hover:gap-3 duration-300 text-white rounded-xl text-btn-lg py-4 pl-6 pr-4 flex justify-center items-center gap-2 max-md:w-full">
                         <span>Lihat Selengkapnya</span>
                         <img src="/assets/svg/arrow-right-icon.svg" alt="Arrow Right Icon">
                     </a>
@@ -203,7 +207,7 @@
                 <h2 class="text-h2 text-primary-50 mb-8 max-sm:mb-6">Rilisan Karya Eksklusif dari Toko Brow</h2>
                 
                 {{-- Merhcandise Catalogue --}}
-                <div class="relative group max-sm:mx-4">
+                <div class="relative max-sm:mx-4">
                     
                     <button class="swiper-prev-btn absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 z-20 size-12 bg-primary-800 grid place-content-center cursor-pointer rounded-full max-sm:size-9">
                         <img src="/assets/svg/chevron-left-icon.svg" alt="Chevron Left Icon" class="max-sm:size-6">
@@ -217,8 +221,8 @@
                         <div class="swiper-wrapper text-start">
                             @foreach ($merchandise as $item)
                                 <div class="swiper-slide">
-                                    <div class="rounded-[32px] bg-primary-50 border border-primary-100 overflow-hidden relative w-full aspect-[4/5] md:aspect-auto">
-                                        <img src="{{ $item['image'] }}" alt="{{ $item['description'] }}" class="w-full h-full object-cover">
+                                    <div class="rounded-[32px] bg-primary-50 border border-primary-100 overflow-hidden relative w-full aspect-[4/5] md:aspect-auto group cursor-pointer">
+                                        <img src="{{ $item['image'] }}" alt="{{ $item['description'] }}" class="w-full h-full object-cover group-hover:scale-110 duration-500">
                                         <div class="p-6 flex flex-col justify-end absolute inset-0 z-10 bg-[linear-gradient(to_top,rgba(0,0,0,0.8)_0%,rgba(0,0,0,0)_60%)] max-sm:p-4">
                                             <h3 class="text-h3 text-primary-50 mb-1">{{ $item['title'] }}</h3>
                                             <h4 class="font-body text-2xl font-semibold text-primary-300 max-sm:text-xl">{{ $item['price'] }}</h4>
@@ -244,24 +248,24 @@
                 {{-- Team Images --}}
                 <div class="text-start grid grid-cols-3 gap-8 max-sm:gap-4 max-sm:grid-cols-1 max-lg:grid-cols-2 max-lg:grid-rows-2 max-lg:gap-6">
 
-                    <div class="rounded-[32px] bg-primary-50 border border-primary-950 overflow-hidden relative">
-                        <img src="/assets/image/lubech.webp" alt="Lubech sebagai owner dari Toko Brow" class="size-full object-cover">
+                    <div class="rounded-[32px] bg-primary-50 border border-primary-950 overflow-hidden relative group">
+                        <img src="/assets/image/lubech.webp" alt="Lubech sebagai owner dari Toko Brow" class="size-full object-cover duration-500 group-hover:scale-110">
                         <div class="p-8 flex flex-col justify-end absolute inset-0 z-10 bg-[linear-gradient(to_top,rgba(0,0,0,0.8)_0%,rgba(0,0,0,0)_60%)] max-sm:p-6">
                             <h2 class="text-h2 text-primary-50 mb-1">Lubech</h2>
                             <p class="font-body text-2xl font-medium text-primary-300 max-sm:text-xl">Owner</p>
                         </div>
                     </div>
 
-                    <div class="rounded-[32px] bg-primary-50 border border-primary-950 overflow-hidden relative">
-                        <img src="/assets/image/rahel.webp" alt="Rahel sebagai Head Chef Pastry di Toko Brow" class="size-full object-cover">
+                    <div class="rounded-[32px] bg-primary-50 border border-primary-950 overflow-hidden relative group">
+                        <img src="/assets/image/rahel.webp" alt="Rahel sebagai Head Chef Pastry di Toko Brow" class="size-full object-cover duration-500 group-hover:scale-110">
                         <div class="p-8 flex flex-col justify-end absolute inset-0 z-10 bg-[linear-gradient(to_top,rgba(0,0,0,0.8)_0%,rgba(0,0,0,0)_60%)] max-sm:p-6">
                             <h2 class="text-h2 text-primary-50 mb-1">Rahel</h2>
                             <p class="font-body text-2xl font-medium text-primary-300 max-sm:text-xl">Head Chef Pastry</p>
                         </div>
                     </div>
 
-                    <div class="rounded-[32px] bg-primary-50 border border-primary-950 overflow-hidden relative sm:max-lg:col-span-2 sm:max-lg:aspect-[16/10]">
-                        <img src="/assets/image/toko-brow-crew.webp" alt="Semua crew Toko Brow yang ikut terlibat di belakang layar" class="size-full object-cover sm:max-lg:object-[0_-200px]">
+                    <div class="rounded-[32px] bg-primary-50 border border-primary-950 overflow-hidden relative sm:max-lg:col-span-2 sm:max-lg:aspect-[16/10] group">
+                        <img src="/assets/image/toko-brow-crew.webp" alt="Semua crew Toko Brow yang ikut terlibat di belakang layar" class="size-full object-cover sm:max-lg:object-[0_-200px] duration-500 group-hover:scale-110">
                         <div class="p-8 flex flex-col justify-end absolute inset-0 z-10 bg-[linear-gradient(to_top,rgba(0,0,0,0.8)_0%,rgba(0,0,0,0)_60%)] max-sm:p-6">
                             <h2 class="text-h2 text-primary-50 mb-1">Toko Brow Crew</h2>
                             <p class="font-body text-2xl font-medium text-primary-300 max-sm:text-xl">Tim Di Balik Layar</p>
